@@ -113,4 +113,4 @@ For Postgres:
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Hibernate Search](https://docs.jboss.org/hibernate/search/7.2/reference/en-US/html_single/index.html#backend-elasticsearch-compatibility-opensearch)
 - [PostgreSQL](https://hub.docker.com/_/postgres)
-- [Opensearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/)
+- [Opensearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/)# opensearch-project
