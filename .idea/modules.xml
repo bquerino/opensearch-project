@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/opensearch-project.iml" filepath="$PROJECT_DIR$/.idea/opensearch-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/payment-processor/payment-processor.iml" filepath="$PROJECT_DIR$/app/payment-processor/payment-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/payment-processor/payment-processor-api/payment-processor-api.iml" filepath="$PROJECT_DIR$/app/payment-processor/payment-processor-api/payment-processor-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/payment-processor/payment-processor-domain/payment-processor-domain.iml" filepath="$PROJECT_DIR$/app/payment-processor/payment-processor-domain/payment-processor-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/payment-processor/payment-processor-repository/payment-processor-repository.iml" filepath="$PROJECT_DIR$/app/payment-processor/payment-processor-repository/payment-processor-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/payment-processor/payment-processor-service/payment-processor-service.iml" filepath="$PROJECT_DIR$/app/payment-processor/payment-processor-service/payment-processor-service.iml" />
+    </modules>
+  </component>
+</project>

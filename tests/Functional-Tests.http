@@ -1,0 +1,36 @@
+### Send POST request with json body
+POST http://localhost:8081/api/payments
+Content-Type: application/json
+
+{
+  "description": "Payment for order #12346",
+  "amount": 100.00
+}
+
+<> 2024-08-25T004431.200.json
+<> 2024-08-25T004400.200.json
+
+### Send POST request with json body
+POST http://localhost:8081/api/payments
+Content-Type: application/json
+
+{
+  "description": "Payment for government",
+  "amount": 50.00
+}
+
+### GET request with a header
+GET http://localhost:8081/api/payments/search?description=government
+Accept: application/json
+
+<> 2024-08-25T004742.200.json
+<> 2024-08-25T004740.200.json
+<> 2024-08-25T004728.200.json
+<> 2024-08-25T004719.200.json
+<> 2024-08-25T004709.200.json
+<> 2024-08-25T004708.200.json
+<> 2024-08-25T004706.200.json
+<> 2024-08-25T004704.200.json
+<> 2024-08-25T004651.200.json
+<> 2024-08-25T004640.200.json
+<> 2024-08-25T004626.405.json
