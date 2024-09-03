@@ -34,3 +34,7 @@ Accept: application/json
 <> 2024-08-25T004651.200.json
 <> 2024-08-25T004640.200.json
 <> 2024-08-25T004626.405.json
+
+### GET request with a header
+GET http://localhost:8081/api/payments/search-paginated?description=government&page=0&size=10"
+Accept: application/json

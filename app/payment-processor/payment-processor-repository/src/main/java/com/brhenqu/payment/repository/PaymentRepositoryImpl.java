@@ -7,6 +7,9 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.hibernate.search.mapper.orm.Search;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -45,5 +48,19 @@ public class PaymentRepositoryImpl implements PaymentRepository {
         return entities.stream()
                 .map(paymentMapper::toDomain)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Page<Payment> findByDescriptionPaginated(String description, Pageable pageable) {
+        var searchSession = Search.session(entityManager);
+        var result = searchSession.search(PaymentEntity.class)
+                .where(f -> f.match().field("description").matching(description))
+                .fetchHits((int) pageable.getOffset(), pageable.getPageSize());
+
+        List<Payment> payments = result.stream()
+                .map(paymentMapper::toDomain)
+                .collect(Collectors.toList());
+
+        return new PageImpl<>(payments, pageable, result.size());
     }
 }

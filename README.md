@@ -33,6 +33,52 @@ The service layer contains business services that orchestrate the operations bet
 ### 4. `payment-processor-api`
 This module exposes RESTful APIs for external clients. It handles HTTP requests and responses and interacts with the service layer to process payments and perform searches.
 
+---
+## Setup and Installation 🚀
+
+To get started with the project, follow these steps:
+
+### **Prerequisites**
+
+* Java 17
+* Maven 3.8+
+* PostgreSQL 12+
+* Opensearch 2.16
+
+### **Steps**
+
+- Clone the repository
+- Build the project
+```bash
+mvn clean install
+```
+- Start the infrastructure using Docker Compose:
+
+```bash
+  cd infrastructure
+  docker-compose up
+```
+- Run the application.
+```bash
+mvn spring-boot:run
+```
+
+- To stop and remove the infrastructure run the following:
+```bash
+docker-compose down -v
+```
+
+### **View data**
+
+If you want to check what is happening behind the scenes, you can access the following urls:
+
+For Opensearch:
+- http://localhost:5601/app/opensearch-query-workbench#/
+
+For Postgres:
+- http://localhost:8080/
+
+---
 ## API Endpoints 📡
 
 ### 1. Create Payment
@@ -64,53 +110,54 @@ This module exposes RESTful APIs for external clients. It handles HTTP requests 
   }
   ]
   ```
-
-## Setup and Installation 🚀
-
-To get started with the project, follow these steps:
-
-### **Prerequisites**
-
-* Java 17
-* Maven 3.8+
-* PostgreSQL 12+
-* Opensearch 2.16
-
-### **Steps**
-
-- Clone the repository
-- Build the project
-```bash
-mvn clean install
-```
-- Start the infrastructure using Docker Compose:
-  
-```bash
-  cd infrastructure
-  docker-compose up
-```
-- Run the application.
-```bash
-mvn spring-boot:run
-```
-
-- To stop and remove the infrastructure run the following:
-```bash
-docker-compose down -v
-```
-
-### **View data**
-
-If you want to check what is happening behind the scenes, you can access the following urls:
-
-For Opensearch:
-- http://localhost:5601/app/opensearch-query-workbench#/
-
-For Postgres:
-- http://localhost:8080/
-
+### 3. Search Payments by Description Paginated
+- **Endpoint**: `/api/payments/search-paginated?description={YOUR_TERM_HERE}&page=0&size=10`
+- **Method**: `GET`
+- **Request Body**:
+  ```json
+  {
+    "content": [
+    {
+        "id": 3,
+        "description": "Payment for government",
+        "amount": 50.0
+    },
+    {
+      "id": 5,
+      "description": "Payment for government",
+      "amount": 50.0
+    }
+    ],
+    "pageable": {
+      "pageNumber": 0,
+      "pageSize": 20,
+      "sort": {
+        "empty": true,
+        "sorted": false,
+        "unsorted": true
+      },
+      "offset": 0,
+      "paged": true,
+      "unpaged": false
+    },
+    "last": true,
+    "totalElements": 2,
+    "totalPages": 1,
+    "size": 20,
+    "number": 0,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "first": true,
+    "numberOfElements": 2,
+    "empty": false
+  }
+  ```
+---
 ## Acknowledgments 🎉
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Hibernate Search](https://docs.jboss.org/hibernate/search/7.2/reference/en-US/html_single/index.html#backend-elasticsearch-compatibility-opensearch)
 - [PostgreSQL](https://hub.docker.com/_/postgres)
-- [Opensearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/)# opensearch-project
+- [Opensearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/docker/)

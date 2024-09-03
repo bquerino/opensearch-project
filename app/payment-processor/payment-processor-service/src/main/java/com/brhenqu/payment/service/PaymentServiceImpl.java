@@ -6,6 +6,8 @@ import com.brhenqu.payment.repository.dto.PaymentDto;
 import com.brhenqu.payment.service.PaymentService;
 import com.brhenqu.payment.repository.mapper.PaymentMapper; // Assume que você tenha um mapper para conversão
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,5 +38,11 @@ public class PaymentServiceImpl implements PaymentService {
         return payments.stream()
                 .map(paymentMapper::toDto)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Page<PaymentDto> searchPaymentByDescriptionPaginated(String description, Pageable pageable) {
+        return paymentRepository.findByDescriptionPaginated(description, pageable)
+                .map(paymentMapper::toDto);
     }
 }
