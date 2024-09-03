@@ -47,7 +47,7 @@ This module exposes RESTful APIs for external clients. It handles HTTP requests 
   ```
 
 ### 2. Search Payments by Description
-- **Endpoint**: `/api/payments`
+- **Endpoint**: `/api/payments/search?description={INSERT_YOUR_TERM_HERE}`
 - **Method**: `GET`
 - **Request Body**:
   ```json
