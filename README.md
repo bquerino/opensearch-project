@@ -95,7 +95,7 @@ For Postgres:
 ### 2. Search Payments by Description
 - **Endpoint**: `/api/payments/search?description={INSERT_YOUR_TERM_HERE}`
 - **Method**: `GET`
-- **Request Body**:
+- **Response Body**:
   ```json
   [
   {
@@ -113,7 +113,7 @@ For Postgres:
 ### 3. Search Payments by Description Paginated
 - **Endpoint**: `/api/payments/search-paginated?description={YOUR_TERM_HERE}&page=0&size=10`
 - **Method**: `GET`
-- **Request Body**:
+- **Response Body**:
   ```json
   {
     "content": [
