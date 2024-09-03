@@ -8,12 +8,12 @@
 
 ## Overview 📖
 
-The **Payment Processor API** is a robust and scalable solution designed for processing and managing payments. The project is built using modern Java practices and leverages the power of **Spring Boot**, **Hibernate Search**, and **Elasticsearch** to provide efficient and scalable search capabilities over payment data.
+The **Payment Processor API** is a robust and scalable solution designed for processing and managing payments. The project is built using modern Java practices and leverages the power of **Spring Boot**, **Hibernate Search**, and **Opensearch** to provide efficient and scalable search capabilities over payment data.
 
 ## Features ✨
 
 - **Domain-Driven Design (DDD)**: The project follows the principles of DDD, ensuring that the business logic is encapsulated within the domain layer.
-- **Hibernate Search**: Integrated with Elasticsearch to provide full-text search capabilities.
+- **Hibernate Search**: Integrated with Opensearch to provide full-text search capabilities.
 - **PostgreSQL**: Used as the primary relational database for persistence.
 - **Modular Architecture**: The project is organized into multiple modules for better separation of concerns and maintainability.
 
@@ -25,7 +25,7 @@ The project is divided into several modules, each with a specific responsibility
 This module contains the core business logic and domain models. The domain models are implemented using plain Java objects (POJOs) and are responsible for enforcing business rules.
 
 ### 2. `payment-processor-repository`
-This module handles the data persistence logic. It maps domain models to the database entities using **JPA** and **Hibernate Search**. The repository layer interacts with PostgreSQL and Elasticsearch.
+This module handles the data persistence logic. It maps domain models to the database entities using **JPA** and **Hibernate Search**. The repository layer interacts with PostgreSQL and Opensearch.
 
 ### 3. `payment-processor-service`
 The service layer contains business services that orchestrate the operations between the domain and repository layers. It uses **DTOs** (Data Transfer Objects) to transfer data between layers.
