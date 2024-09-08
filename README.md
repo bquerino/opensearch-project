@@ -80,6 +80,9 @@ For Opensearch:
 For Postgres:
 - http://localhost:8080/
 
+For Redis:
+- jdbc:redis://localhost:6379/0
+
 ---
 ## API Endpoints 📡
 
