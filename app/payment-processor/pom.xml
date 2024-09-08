@@ -23,6 +23,7 @@
 		<spring.boot.version>3.3.3</spring.boot.version>
 		<mapstruct.version>1.6.0</mapstruct.version>
 		<hibernate.search.version>7.2.0.Final</hibernate.search.version>
+		<jboss.logging.version>3.6.0.Final</jboss.logging.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -41,9 +42,15 @@
 			<dependency>
 				<groupId>org.jboss.logging</groupId>
 				<artifactId>jboss-logging</artifactId>
-				<version>3.6.0.Final</version>
+				<version>${jboss.logging.version}</version>
 			</dependency>
 
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-redis</artifactId>
+				<version>3.3.3</version>
+			</dependency>
 
 			<!-- MapStruct -->
 			<dependency>

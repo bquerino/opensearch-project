@@ -5,16 +5,18 @@
 ![Hibernate Search](https://img.shields.io/badge/Hibernate%20Search-7.2.0-yellowgreen)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%3E%3D12-blue)
 ![Opensearch](https://img.shields.io/badge/Opensearch-2.16-orange)
+![Redis](https://img.shields.io/badge/Redis-7.4.0-red)
 
 ## Overview 📖
 
-The **Payment Processor API** is a robust and scalable solution designed for processing and managing payments. The project is built using modern Java practices and leverages the power of **Spring Boot**, **Hibernate Search**, and **Opensearch** to provide efficient and scalable search capabilities over payment data.
+The **Payment Processor API** is a robust and scalable solution designed for processing and managing payments. The project is built using modern Java practices and leverages the power of **Spring Boot**, **Hibernate Search**, **Opensearch** and **Redis** to provide efficient and scalable search capabilities over payment data.
 
 ## Features ✨
 
 - **Domain-Driven Design (DDD)**: The project follows the principles of DDD, ensuring that the business logic is encapsulated within the domain layer.
 - **Hibernate Search**: Integrated with Opensearch to provide full-text search capabilities.
 - **PostgreSQL**: Used as the primary relational database for persistence.
+- **Redis**: Used to cache results after GET operations.
 - **Modular Architecture**: The project is organized into multiple modules for better separation of concerns and maintainability.
 
 ## Project Structure 🏗️

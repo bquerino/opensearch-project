@@ -38,3 +38,7 @@ Accept: application/json
 ### GET request with a header
 GET http://localhost:8081/api/payments/search-paginated?description=government&page=0&size=10"
 Accept: application/json
+
+### GET request with a header
+GET http://localhost:8081/api/payments/search?description=#12346
+Accept: application/json
